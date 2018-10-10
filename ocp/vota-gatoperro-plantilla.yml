@@ -3,9 +3,10 @@ kind: Template
 metadata:
   creationTimestamp: null
   name: vota-gatoperro
-  description: "Sample Docker Voting App"
-  tags: "instant-app,dotnet,nodejs,python"
-  iconClass: "fa-terminal"
+  annotations:
+    description: "Sample Docker Voting App"
+    tags: "instant-app,dotnet,nodejs,python"
+    iconClass: "icon-shadowman"
 objects:
 - apiVersion: v1
   kind: Secret
