@@ -2,7 +2,10 @@ apiVersion: v1
 kind: Template
 metadata:
   creationTimestamp: null
-  name: voting-app-template
+  name: vota-gatoperro
+  description: "Sample Docker Voting App"
+  tags: "instant-app,dotnet,nodejs,python"
+  iconClass: "fa-terminal"
 objects:
 - apiVersion: v1
   kind: Secret
@@ -760,4 +763,4 @@ parameters:
     displayName: "Namespace"
     name: "NAMESPACE"
     required: true
-    value: "openshift"
+    value: "vota-gatoperro"
