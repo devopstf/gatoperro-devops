@@ -17,10 +17,10 @@ spec:
   resources: {}
   runPolicy: Serial
   source:
-    contextDir: /worker
+    contextDir: /.
     git:
       ref: master
-      uri: https://github.com/mmumshad/example-voting-app.git
+      uri: https://github.com/devopstf/gatoperro-proceso.git
     type: Git
   strategy:
     dockerStrategy: {}
