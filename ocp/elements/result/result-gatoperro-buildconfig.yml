@@ -2,7 +2,8 @@ apiVersion: v1
 kind: BuildConfig
 metadata:
   annotations:
-      openshift.io/generated-by: OpenShiftWebConsole
+    openshift.io/generated-by: OpenShiftWebConsole
+  creationTimestamp: null
   labels:
     app: result
   name: result
@@ -35,7 +36,7 @@ spec:
   - github:
       secret: e3855e07276e384f
     type: GitHub
-  - imageChange: {}     
+  - imageChange: {}
     type: ImageChange
   - type: ConfigChange
 status:
