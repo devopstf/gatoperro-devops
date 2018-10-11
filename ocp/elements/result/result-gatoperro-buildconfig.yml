@@ -1,0 +1,36 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  labels: app
+  name: result
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'result:latest'
+  runPolicy: Serial
+  source:
+    contextDir: /result
+    git:
+      ref: master
+      uri: https://github.com/mmumshad/example-voting-app.git
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: nodejs:8
+        namespace: openshift
+    type: Source
+  triggers:
+  - generic:
+      secret: d6e5e1aa0e2f1b56
+    type: Generic
+  - github:
+      secret: e3855e07276e384f
+    type: GitHub
+  - imageChange: {}
+    type: ImageChange
+  - type: ConfigChange
+status:
+  latestVersion: 0

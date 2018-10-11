@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftWebConsole
+  creationTimestamp: null
+  labels:
+    app: vote
+  name: vote
+spec:
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: vote:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    contextDir: /vote
+    git:
+      ref: master
+      uri: https://github.com/mmumshad/example-voting-app.git
+    type: Git
+  strategy:
+    sourceStrategy:
+      env:
+      - name: REDIS_PASSWORD
+        value: redis_password
+      from:
+        kind: ImageStreamTag
+        name: python:3.6
+        namespace: openshift
+    type: Source
+  triggers:
+  - generic:
+      secret: 06d00e93d2fc06a4
+    type: Generic
+  - github:
+      secret: 03cac1a3c8e45098
+    type: GitHub
+  - imageChange: {}
+    type: ImageChange
+  - type: ConfigChange
+status:
+  lastVersion: 0
