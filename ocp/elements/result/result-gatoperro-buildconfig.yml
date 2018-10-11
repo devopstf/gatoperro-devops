@@ -5,7 +5,7 @@ metadata:
     openshift.io/generated-by: OpenShiftWebConsole
   labels:
     app: result
-    name: result
+  name: result
 spec:
   nodeSelector: null
   output:
