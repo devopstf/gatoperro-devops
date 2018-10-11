@@ -17,7 +17,7 @@ spec:
   resources: {}
   runPolicy: Serial
   source:
-    contextDir: /vote
+    contextDir: /.
     git:
       ref: master
       uri: https://github.com/devopstf/gatoperro-voto.git
