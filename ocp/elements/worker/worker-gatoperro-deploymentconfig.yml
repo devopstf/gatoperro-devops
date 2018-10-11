@@ -56,6 +56,5 @@ spec:
       from:
         kind: ImageStreamTag
         name: worker:latest
-        namespace: "${NAMESPACE}"
     type: ImageChange
   - type: ConfigChange
