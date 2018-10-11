@@ -53,7 +53,6 @@ spec:
       from:
         kind: ImageStreamTag
         name: result:latest
-        namespace: "${NAMESPACE}"
     type: ImageChange
   - type: ConfigChange
 status:
