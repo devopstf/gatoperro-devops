@@ -2,7 +2,7 @@ apiVersion: v1
 kind: BuildConfig
 metadata:
   annotations:
-    openshift.io/generated-by: OpenShiftWebConsole
+      openshift.io/generated-by: OpenShiftWebConsole
   labels:
     app: result
   name: result
