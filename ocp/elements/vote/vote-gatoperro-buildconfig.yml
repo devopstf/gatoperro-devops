@@ -20,7 +20,7 @@ spec:
     contextDir: /vote
     git:
       ref: master
-      uri: https://github.com/mmumshad/example-voting-app.git
+      uri: https://github.com/devopstf/gatoperro-voto.git
     type: Git
   strategy:
     sourceStrategy:
