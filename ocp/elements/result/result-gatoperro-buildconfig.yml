@@ -19,7 +19,7 @@ spec:
   source:
     contextDir: /.
     git:
-      ref: master
+      ref: develop
       uri: https://github.com/devopstf/gatoperro-resultado.git
     type: Git
   strategy:
